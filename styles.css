@@ -329,6 +329,121 @@ body {
     margin-top: 3rem;
 }
 
+/* Video Player */
+.video-player-container {
+    margin-bottom: 3rem;
+}
+
+.video-wrapper {
+    position: relative;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper video {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    border-radius: 8px;
+}
+
+.video-description {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #7f8c8d;
+}
+
+.video-description strong {
+    color: #2c3e50;
+}
+
+.video-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+.video-info h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.video-info h4 {
+    color: #3498db;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.instructions {
+    color: #7f8c8d;
+}
+
+.instructions ol {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.instructions ol li {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+.instructions code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #e74c3c;
+    word-break: break-all;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.video-section-header {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.video-section-header h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.video-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-item .video-wrapper {
+    margin-bottom: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -353,7 +468,8 @@ body {
     .content-grid,
     .team-grid,
     .provider-grid,
-    .license-grid {
+    .license-grid,
+    .video-list {
         grid-template-columns: 1fr;
     }
 

@@ -4,13 +4,15 @@ A simple and professional internal website for organizational information, built
 
 ## Features
 
-- **Clean Navigation**: Easy-to-use navigation bar with four main sections
+- **Clean Navigation**: Easy-to-use navigation bar with five main sections
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Professional Styling**: Modern, clean interface with subtle animations
-- **Three Main Sections**:
+- **Video Support**: Embedded video player for AWS-hosted videos
+- **Four Main Sections**:
   - Team Introduction: Showcase your organization's team members
   - Provider Introduction: Display information about service providers and partners
   - License Introduction: List certifications, accreditations, and licenses
+  - Video: Host and display videos from AWS S3 or CloudFront
 
 ## File Structure
 
@@ -20,7 +22,9 @@ A simple and professional internal website for organizational information, built
 ├── team.html           # Team Introduction page
 ├── providers.html      # Provider Introduction page
 ├── licenses.html       # License Introduction page
+├── video.html          # Video page
 ├── styles.css          # Main stylesheet
+├── AWS_VIDEO_SETUP.md  # AWS video hosting guide
 └── README.md           # This file
 ```
 
@@ -61,6 +65,7 @@ A simple and professional internal website for organizational information, built
 2. **Provider Information**: Edit `providers.html` to update provider details
 3. **License Information**: Edit `licenses.html` to add certifications/licenses
 4. **Home Page**: Edit `index.html` to customize the landing page
+5. **Video Content**: Edit `video.html` to add your AWS video URLs (see AWS_VIDEO_SETUP.md)
 
 ### Styling
 
@@ -78,6 +83,15 @@ To add profile pictures or logos:
 1. Create an `images` folder in your repository
 2. Add your image files there
 3. Update the HTML to reference them: `<img src="images/photo.jpg" alt="Description">`
+
+### Adding Videos
+
+To add videos from AWS:
+1. Upload your video to AWS S3 or CloudFront
+2. See `AWS_VIDEO_SETUP.md` for detailed instructions
+3. Get your video URL (S3, CloudFront, or presigned URL)
+4. Replace the placeholder URL in `video.html` or `index.html`
+5. Update the `<source>` tag's `src` attribute with your URL
 
 ## Browser Support
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video - Organization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Organization</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Team Introduction</a></li>
+                <li><a href="providers.html">Provider Introduction</a></li>
+                <li><a href="licenses.html">License Introduction</a></li>
+                <li><a href="video.html" class="active">Video</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h2>Video Library</h2>
+            <p>Watch our organizational videos and presentations</p>
+        </div>
+
+        <div class="content-section">
+            <div class="video-player-container">
+                <div class="video-wrapper">
+                    <video controls width="100%" poster="https://via.placeholder.com/800x450?text=Video+Thumbnail">
+                        <!-- REPLACE THIS URL WITH YOUR AWS VIDEO URL -->
+                        <!-- Option 1: AWS S3 Direct URL (if public) -->
+                        <source src="https://your-bucket-name.s3.your-region.amazonaws.com/path/to/video.mp4" type="video/mp4">
+                        
+                        <!-- Option 2: AWS CloudFront URL (recommended for better performance) -->
+                        <!-- <source src="https://your-cloudfront-domain.cloudfront.net/path/to/video.mp4" type="video/mp4"> -->
+                        
+                        <!-- Option 3: Presigned URL (for private videos) - expires after set time -->
+                        <!-- <source src="YOUR_PRESIGNED_URL_HERE" type="video/mp4"> -->
+                        
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>How to Add Your AWS Video</h3>
+                    <div class="instructions">
+                        <h4>Method 1: Direct S3 URL (Public Bucket)</h4>
+                        <ol>
+                            <li>Make your S3 bucket and video file public</li>
+                            <li>Get the URL: <code>https://your-bucket.s3.region.amazonaws.com/video.mp4</code></li>
+                            <li>Replace the src attribute in the video tag above</li>
+                        </ol>
+
+                        <h4>Method 2: CloudFront (Recommended)</h4>
+                        <ol>
+                            <li>Set up AWS CloudFront distribution for your S3 bucket</li>
+                            <li>Use the CloudFront URL: <code>https://d1234567890.cloudfront.net/video.mp4</code></li>
+                            <li>Better performance and lower costs for large files</li>
+                        </ol>
+
+                        <h4>Method 3: Presigned URL (Private Videos)</h4>
+                        <ol>
+                            <li>Generate a presigned URL with AWS SDK or CLI</li>
+                            <li>URL format: <code>https://bucket.s3.amazonaws.com/video.mp4?AWSAccessKeyId=...&Signature=...&Expires=...</code></li>
+                            <li>Note: Presigned URLs expire after a set time</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional: Additional video section -->
+            <div class="video-section-header">
+                <h3>Additional Videos</h3>
+            </div>
+
+            <div class="video-list">
+                <!-- You can add more video players here -->
+                <!-- 
+                <div class="video-item">
+                    <div class="video-wrapper">
+                        <video controls width="100%">
+                            <source src="YOUR_AWS_VIDEO_URL_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Organization. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
